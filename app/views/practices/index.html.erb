@@ -2,7 +2,10 @@
 <ul>
   <% @practices.each do |practice| %>
     <li>
-      <%= practice.title%>
+      <%= link_to practice.title, practices%>
+    </li>
+    <li>
+      <%= link_to "New Practice", new_practice_path %>
     </li>
   <% end %>
 </ul>
