@@ -22,7 +22,7 @@ class PracticesController < ApplicationController
       redirect_to @practice
     else
       flash[:danger] = "記事の作成が失敗しました。"
-      render new
+      render :new, status: :unprocessable_entity
     end
   end
 
