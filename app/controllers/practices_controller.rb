@@ -32,3 +32,4 @@ class PracticesController < ApplicationController
     params.require(:practice).permit(:title, :body)
   end
 end
+
