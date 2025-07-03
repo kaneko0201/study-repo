@@ -1,0 +1,11 @@
+<h1>Practices</h1>
+<ul>
+  <% @practices.each do |practice| %>
+    <li>
+      <%= link_to practice.title, practices%>
+    </li>
+    <li>
+      <%= link_to "New Practice", new_practice_path %>
+    </li>
+  <% end %>
+</ul>
