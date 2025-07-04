@@ -1,4 +1,12 @@
 <h1>new practice</h1>
+<% if @practices.errors.any? %>
+  <h2><%= pluralize(@practices.errors.count, "error") %>が原因で保存できませんでした。</h2>
+  <ul>
+    <% @practices.errors.each do |error| %>
+      <li><%= error.full_message %></li>
+    <% end %>
+  </ul>
+<% end %>
 <%= form_with model: @practice, local: true do |form| %>
   <div>
     <%= form.label :title %>
